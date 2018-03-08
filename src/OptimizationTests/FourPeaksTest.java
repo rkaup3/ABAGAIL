@@ -50,12 +50,13 @@ public class FourPeaksTest {
         GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
         ProbabilisticOptimizationProblem pop = new GenericProbabilisticOptimizationProblem(ef, odd, df);
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/RHC_FourPeaks.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/RHC_FourPeaks.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("RHC");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -66,12 +67,13 @@ public class FourPeaksTest {
             System.out.println(ef.value(rhc.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/SA_FourPeaks.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/SA_FourPeaks.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("SA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -82,12 +84,13 @@ public class FourPeaksTest {
             System.out.println(ef.value(sa.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/GA_FourPeaks.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/GA_FourPeaks.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("GA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -98,12 +101,13 @@ public class FourPeaksTest {
             System.out.println(ef.value(ga.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/MIMIC_FourPeaks.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FourPeaks/MIMIC_FourPeaks.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("MIMIC");
         for(int i = 0; i < iterations; i++)
         {
 

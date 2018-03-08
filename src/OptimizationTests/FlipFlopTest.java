@@ -38,12 +38,15 @@ public class FlipFlopTest {
         GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
         ProbabilisticOptimizationProblem pop = new GenericProbabilisticOptimizationProblem(ef, odd, df);
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/RHC_FlipFlop.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/RHC_FlipFlop.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+
+        System.out.println("RHC");
+
         for(int i = 0; i < iterations; i++)
         {
             RandomizedHillClimbing rhc = new RandomizedHillClimbing(hcp);
@@ -54,12 +57,14 @@ public class FlipFlopTest {
 
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/SA_FlipFlop.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/SA_FlipFlop.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+
+        System.out.println("SA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -70,12 +75,14 @@ public class FlipFlopTest {
             System.out.println(ef.value(sa.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/GA_FlipFlop.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/GA_FlipFlop.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+
+        System.out.println("GA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -87,12 +94,13 @@ public class FlipFlopTest {
 
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/MIMIC_FlipFlop.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("FlipFlop/MIMIC_FlipFlop.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("MIMIC");
         for(int i = 0; i < iterations; i++)
         {
 

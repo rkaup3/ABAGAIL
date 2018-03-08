@@ -42,12 +42,13 @@ public class TravelingSalesmanTest {
         HillClimbingProblem hcp = new GenericHillClimbingProblem(ef, odd, nf);
         GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/RHC_TravelingSalesman.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/RHC_TravelingSalesman.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("RHC");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -58,12 +59,13 @@ public class TravelingSalesmanTest {
             System.out.println(ef.value(rhc.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/SA_TravelingSalesman.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/SA_TravelingSalesman.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("SA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -74,12 +76,13 @@ public class TravelingSalesmanTest {
             System.out.println(ef.value(sa.getOptimal()) + ", " + (((double)(System.nanoTime() - t))/ 1e9d));
         }
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/GA_TravelingSalesman.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/GA_TravelingSalesman.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("GA");
         for(int i = 0; i < iterations; i++)
         {
 
@@ -98,12 +101,13 @@ public class TravelingSalesmanTest {
         odd = new  DiscreteUniformDistribution(ranges);
         Distribution df = new DiscreteDependencyTree(.1, ranges);
 
-        try {
-            PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/MIMIC_TravelingSalesman.csv"));
-            System.setOut(out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     PrintStream out = new PrintStream(new FileOutputStream("TravelingSalesman/MIMIC_TravelingSalesman.csv"));
+        //     System.setOut(out);
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+        System.out.println("MIMIC");
         for(int i = 0; i < iterations; i++)
         {
 
